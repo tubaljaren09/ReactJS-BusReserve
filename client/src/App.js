@@ -7,6 +7,7 @@ import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Book from './Components/Book';
 import About from './Components/About';
+import Admin from './Components/Admin';
 
 /* STYLES */
 import './Styles/app.scss';
@@ -24,6 +25,9 @@ const App = () => {
                 </Route>
                 <Route path="/about">
                     <About />
+                </Route>
+                <Route path="/admin">
+                    <Admin />
                 </Route>
                 <Route path="/">
                     <Home />

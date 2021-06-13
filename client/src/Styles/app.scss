@@ -4,6 +4,7 @@
 }
 /* VARIABLES */
 $black:#141414;
+$gray: #f0f2f5;
 
 *{
     padding:0;
@@ -25,4 +26,5 @@ $black:#141414;
     @import './home.scss';
     @import './book.scss';
     @import './about.scss';
+    @import './admin.scss';
 }
