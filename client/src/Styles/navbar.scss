@@ -1,0 +1,55 @@
+.navbar-main{
+    background-image:url('../Images/header.jpg');
+    background-size:cover;
+    background-position:center;
+
+    /* GRID FROM APP */
+    grid-column:1/2;
+    grid-row:1/2;
+    .navbar-container{
+        width:80%;
+        margin:auto;
+        height:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        row-gap:40px;
+        color:#fff;
+        .navbar-top{
+            text-align:center;
+            text-shadow:3px 3px 5px $black;
+            h1{
+                font-size:60px;
+            }
+            h2{
+                font-size:20px;
+            }
+        }
+        .navbar-down{
+            width:100%;
+            ul{
+                list-style-type:none;
+                width:40%;
+                padding:20px;
+                border-radius:50px;
+                margin:auto;
+                background:$black;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                .navbar{
+                    color:rgba(255,255,255,.2);
+                    text-decoration:none;
+                    padding:20px;
+                }
+                .navbar:hover{
+                    color:#fff;
+                }
+                .navbar-active{
+                    color:#fff;
+                }
+            }
+        }
+    }
+}
