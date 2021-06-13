@@ -18,10 +18,11 @@ $black:#141414;
     /* GRID */
     display:grid;
     grid-template-columns:1fr;
-    grid-template-rows:40% 80% 10%;
+    grid-template-rows:40% auto 10%;
 
     @import './navbar.scss';
     @import './footer.scss';
     @import './home.scss';
     @import './book.scss';
+    @import './about.scss';
 }

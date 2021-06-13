@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Book from './Components/Book';
+import About from './Components/About';
 
 /* STYLES */
 import './Styles/app.scss';
@@ -20,6 +21,9 @@ const App = () => {
                 </Route>
                 <Route path="/book">
                     <Book />
+                </Route>
+                <Route path="/about">
+                    <About />
                 </Route>
                 <Route path="/">
                     <Home />
