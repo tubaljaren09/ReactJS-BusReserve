@@ -1,5 +1,18 @@
 .footer-main{
+    background:$black;
+    color:rgba(255,255,255,.2);
     /* GRID FROM APP */
     grid-column:1/2;
     grid-row:3/4;
+    .footer-container{
+        width:80%;
+        margin:auto;
+        height:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        h1{
+            font-size:20px;
+        }
+    }
 }
