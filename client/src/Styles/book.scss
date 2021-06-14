@@ -1,5 +1,70 @@
 .book-main{
+    animation:transitionIn 0.75s;
+    background-image:url('../Images/overlay.png');
+    background-size:auto;
+    padding:50px 0px;
     /* GRID FROM APP */
     grid-column:1/2;
     grid-row:2/3;
+    .book-container{
+        width:70%;
+        margin:auto;
+        height:100%;
+        display:flex;
+        flex-direction:column;
+        row-gap:20px;
+        .register-form{
+            width:400px;
+            display:flex;
+            flex-direction:column;
+            row-gap:30px;
+            input[type=text]{
+                border-radius:20px;
+                padding:10px;
+                border:1px solid $black;
+                font-size:15px;
+                outline:none;
+            }
+            .gender{
+                display:flex;
+                align-items:center;
+                column-gap:20px;
+                p{
+                    font-size:18px;
+                }
+                input[type=radio]{
+                    transform:scale(2);
+                }
+            }
+            .covid-form{
+                display:flex;
+                flex-direction:column;
+                row-gap:10px;
+                .question{
+                    display:flex;
+                    flex-direction:column;
+                    row-gap:10px;
+                    .q1{
+                        display:flex;
+                        align-items:center;
+                        column-gap:20px;
+                        input[type=radio]{
+                            transform:scale(2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @keyframes transitionIn{
+        from{
+            opacity:0;
+            transform:translateX(-10deg);
+        }
+    
+        to{
+            opacity:1;
+            transform:translateX(0);
+        }
+    }
 }
