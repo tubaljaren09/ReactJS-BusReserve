@@ -33,13 +33,13 @@
                     font-size:18px;
                 }
                 input[type=radio]{
-                    transform:scale(2);
+                    transform:scale(1.5);
                 }
             }
             .covid-form{
                 display:flex;
                 flex-direction:column;
-                row-gap:10px;
+                row-gap:20px;
                 .question{
                     display:flex;
                     flex-direction:column;
@@ -49,7 +49,7 @@
                         align-items:center;
                         column-gap:20px;
                         input[type=radio]{
-                            transform:scale(2);
+                            transform:scale(1.5);
                         }
                     }
                 }
