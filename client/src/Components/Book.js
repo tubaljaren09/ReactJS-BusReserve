@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Axios from 'axios';
 
 const Book = () => {
 
@@ -23,7 +24,23 @@ const Book = () => {
         });
     }
 
-    console.log('State: ', state);
+    const register = () => {
+        Axios.post("http://localhost:3001/register", {
+            lastName: state.lastName,
+            firstName: state.firstName,
+            middleName: state.middleName,
+            gender: state.gender,
+            age: state.age,
+            address: state.address,
+            contactNumber: state.contactNumber,
+            email: state.email,
+            q1: state.q1,
+            q2: state.q2,
+            q3: state.q3
+        }).then((response) => {
+            console.log(response);
+        });
+    }
 
     return(
         <div className="book-main">
@@ -69,7 +86,7 @@ const Book = () => {
                         </div>
                     </div>
                     <div className="button">
-                        <button>Next</button>
+                        <button onClick={register}>Next</button>
                     </div>
                 </form>
             </div>
