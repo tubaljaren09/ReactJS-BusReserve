@@ -49,7 +49,7 @@ const Book = () => {
                     <h1>Covid-19 Tracing Form</h1>
                     <h2>PLEASE FILL OUT THE FORM COMPLETELY.</h2>
                 </div>
-                <form className="register-form">
+                <form className="register-form" onSubmit={register}>
                     <input type="text" name="lastName" placeholder="Last Name" value={state.lastName} onChange={handleOnChange}/>
                     <input type="text" name="firstName" placeholder="First Name" value={state.firstName} onChange={handleOnChange}/>
                     <input type="text" name="middleName" placeholder="Middle Name" value={state.middleName} onChange={handleOnChange}/>
@@ -86,7 +86,7 @@ const Book = () => {
                         </div>
                     </div>
                     <div className="button">
-                        <button onClick={register}>Next</button>
+                        <button>Next</button>
                     </div>
                 </form>
             </div>

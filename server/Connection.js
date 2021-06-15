@@ -30,7 +30,7 @@ app.post("/register", (req, res) => {
     const q3 = req.body.q3;
     
     db.query(`INSERT INTO covid_tracing_form(lastName, firstName, middleName, gender, age, address, contactNumber, email, question1, question2, question3) 
-    VALUES ('Tubal', '${firstName}', '${middleName}', '${gender}', '${age}', '${address}', '${contactNumber}', '${email}', '${q1}', '${q2}', '${q3}')`, (err, results) => {
+    VALUES ('${lastName}', '${firstName}', '${middleName}', '${gender}', '${age}', '${address}', '${contactNumber}', '${email}', '${q1}', '${q2}', '${q3}')`, (err, results) => {
         console.log(err);
     });
 });
