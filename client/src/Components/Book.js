@@ -3,6 +3,7 @@ import Axios from 'axios';
 
 const Book = () => {
 
+    const [isOpen, setIsOpen] = useState(false);
     const [state, setState] = useState({
         lastName: '',
         firstName: '',
@@ -85,10 +86,49 @@ const Book = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="button">
-                        <button>Next</button>
-                    </div>
+                    {isOpen ? (
+                        <div className="modal">
+                            <div className="modal-content">
+                                <span className="closeBtn" onClick={() => setIsOpen(false)}>&times;</span>
+                                <div className="form-greet">
+                                    <h1>Ticket Details</h1>
+                                    <h4>PLEASE FILL OUT THE FORM COMPLETELY.</h4>
+                                </div>
+                                <div className="content">
+                                    <label>Route:</label>
+                                    <select name="route" id="route">
+                                        <option selected disabled>Select a route</option>
+                                        <option value="Manila to Cebu">Manila - Cebu</option>
+                                        <option value="Manila to Bicol">Manila - Bicol</option>
+                                        <option value="Manila to Bataan">Manila - Bataan</option>
+                                    </select>
+                                </div>
+                                <div className="content">
+                                    <label>Bus:</label>
+                                    <select name="bus" id="bus">
+                                        <option selected disabled>Select a bus</option>
+                                        <option value="Bus 1">Bus 1</option>
+                                        <option value="Bus 2">Bus 2</option>
+                                        <option value="Bus 3">Bus 3</option>
+                                    </select>
+                                </div>
+                                <div className="content">
+                                    <label>Departure Date And Time:</label>
+                                    <input type="datetime-local" id="departure" name="departure"/>
+                                </div>
+                                <div class="content">
+                                    <label>Ticket Price:</label>
+                                    <label id="price"></label>
+                                </div>
+                                <input type="submit" id="submit-form" className="hidden" name="submit"/><br/>
+                                <label className="submitBtn" for="submit-form" tabindex="0">Submit</label>
+                            </div>
+                        </div>
+                    ) : null}
                 </form>
+                <div className="button">
+                    <button onClick={() => setIsOpen(true)}>Next</button>
+                </div>
             </div>
         </div>
     )
